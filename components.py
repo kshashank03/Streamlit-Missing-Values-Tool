@@ -13,3 +13,12 @@ def file_uploading(upload):
     
     else:
         return None, None
+
+
+def delete_rows(data_import, column_name):
+    if data_import is not None:
+        new_dataframe = data_import[data_import[column_name].notna()]
+        
+        return new_dataframe
+    else:
+        return None
