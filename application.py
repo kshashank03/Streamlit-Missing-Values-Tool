@@ -20,13 +20,14 @@ with left.beta_expander(label="Delete Row Method"):
 
 
 with left.beta_expander(label="Mean Imputation Method"):
-    left_mean_replace = st.subheader("Mean Imputation Method")
+    left_mean_dataframe = st.write(comp.mean_rows(data_import, column_sidebar))
 
 with left.beta_expander(label="Median Imputation Method"):
-    left_median_replace = st.subheader("Median Imputation Method")
+    left_median_dataframe = st.write(comp.median_rows(data_import, column_sidebar))
 
 with left.beta_expander(label="Linear Regression Method"):
     left_linear_regression = st.subheader("Linear Regression Method")
+    left_linear_select_box = comp.linear_regression_variable_selector(data_import, column_sidebar)
 
 
 
